@@ -1,0 +1,106 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menu__container {
+  padding-left: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.menu__films {
+  display: flex;
+  flex-direction: row;
+  column-gap: 16px;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: #000;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.menu__link_active {
+  text-decoration: none;
+  color: #000;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.menu__account-button {
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 7px;
+  width: 100px;
+  border-radius: 50px;
+  border: 2px solid rgba(0, 0, 0, .1);
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.menu__auth {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 30px;
+  width: 100%;
+}
+
+.menu__link_signup {
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.menu__button_signin {
+  padding: 8px 20px;
+  border-radius: 3px;
+  background: #3456F3;
+  border: none;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.drop-menu__open-button {
+  padding: 0;
+  background: url(../../images/dropmenu.svg);
+  border: 0;
+  display: none;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    justify-content: flex-end;
+  }
+
+  .drop-menu__open-button {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .drop-menu__open-button {
+    width: 40px;
+    height: 43px;
+  }
+}

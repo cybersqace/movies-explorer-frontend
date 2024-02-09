@@ -1,0 +1,59 @@
+.page__content {
+  margin: 246px auto 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page__title {
+  margin: 0;
+  font-size: 140px;
+  font-weight: 400;
+  line-height: 169px;
+}
+
+.page__subtitle {
+  margin: 0;
+  padding-top: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.page__link {
+  padding-top: 184px;
+  color: #3456F3;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  transition: opacity .5s ease;
+  text-decoration: none;
+}
+
+.page__link:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+  .page__content {
+    margin: 408px auto 222px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .page__content {
+    margin: 329px auto 30px;
+  }
+
+  .page__subtitle {
+    padding-top: 10px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .page__link {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

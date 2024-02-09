@@ -1,0 +1,106 @@
+.drop-menu {
+  display: none;
+  z-index: 1;
+}
+
+.drop-menu__background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+}
+
+.drop-menu__container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  width: 68%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drop-menu__close-button {
+  border: none;
+  background: none;
+  background-image: url('../../images/closemenubutton.svg');
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  padding: 0;
+}
+
+.drop-menu__content {
+  margin-top: 159px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 22px;
+}
+
+.drop-menu__link {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.drop-menu__account-link {
+  margin-bottom: 90px;
+  text-decoration: none;
+}
+
+.drop-menu__link:focus {
+  padding-bottom: 4px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  border-bottom: 2px solid #000;
+  text-decoration: none;
+}
+
+.drop-menu__account-button {
+  padding: 8px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  border: none;
+  border-radius: 20px;
+  background-color: #F9F9F9;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .drop-menu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .drop-menu__container {
+    width: 100%;
+  }
+
+  .drop-menu__close-button {
+    width: 22px;
+    height: 22px;
+    top: 13px;
+    right: 13px;
+    background-size: contain;
+  }
+
+  .drop-menu__account-link {
+    margin-bottom: 46px;
+    text-decoration: none;
+  }
+}
