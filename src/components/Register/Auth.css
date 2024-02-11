@@ -11,6 +11,9 @@
 
 .auth__title {
   margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
 }
 
 .auth__form {
@@ -74,6 +77,7 @@
 
 .auth__button-login {
   margin-top: 221px;
+  padding: 0;
   background: #3456F3;
   border-radius: 3px;
   color: #FFF;
@@ -137,6 +141,10 @@
     margin-top: 50px;
   }
 
+  .auth__logo {
+    align-self: center;
+  }
+
   .auth__title {
     align-self: center;
   }
@@ -146,7 +154,13 @@
   }
   
   .auth__subtitle {
+    margin-top: 14px;
     font-size: 12px;
     line-height: 15px;
+  }
+
+  .auth__button-login {
+    margin-top: 309px;
+    width: 260px;
   }
 }

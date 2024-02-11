@@ -76,6 +76,8 @@
 
   .techs__subtitle {
     margin-top: 22px;
+    font-size: 12px;
+    line-height: 18px;
   }
 
   .techs__list {
@@ -102,6 +104,7 @@
   }
 
   .techs__title {
+    margin-top: 60px;
     font-size: 30px;
     line-height: 36px;
   }
@@ -120,6 +123,7 @@
   }
 
   .techs__icon {
+    height: 57px;
     font-size: 12px;
     line-height: 15px;
   }

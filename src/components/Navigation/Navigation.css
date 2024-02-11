@@ -5,9 +5,11 @@
 }
 
 .menu__container {
+  width: 100%;
   padding-left: 45px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .menu__films {
@@ -58,15 +60,12 @@
 }
 
 .menu__link_signup {
-  color: #000;
   font-size: 12px;
-  font-style: normal;
   font-weight: 500;
   line-height: 16px;
-  text-decoration: none;
 }
 
-.menu__button_signin {
+.menu__link_signin {
   padding: 8px 20px;
   border-radius: 3px;
   background: #3456F3;
@@ -78,7 +77,7 @@
   cursor: pointer;
 }
 
-.drop-menu__open-button {
+.menu__button-open {
   padding: 0;
   background: url(../../images/dropmenu.svg);
   border: 0;
@@ -93,13 +92,17 @@
     justify-content: flex-end;
   }
 
-  .drop-menu__open-button {
+  .menu__container {
+    display: none;
+  }
+
+  .menu__button-open {
     display: block;
   }
 }
 
 @media screen and (max-width: 520px) {
-  .drop-menu__open-button {
+  .menu__button-open {
     width: 40px;
     height: 43px;
   }

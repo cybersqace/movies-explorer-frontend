@@ -14,6 +14,7 @@ import Page404 from '../Page404/Page404';
 function App() {
   const { pathname } = useLocation();
   const [currentUser, setCurrentUser] = useState({});
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">

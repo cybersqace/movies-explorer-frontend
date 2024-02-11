@@ -7,8 +7,8 @@ export default function MoviesCardList() {
       <ul className='card-list'>
         <MoviesCard />
       </ul>
-      <div className='card-list__button-block'>
-      <button className='card-list__button'>Ещё</button>
+      <div className='cards__button-block'>
+      <button className='cards__button' type='button'>Ещё</button>
       </div>
     </section>
   )

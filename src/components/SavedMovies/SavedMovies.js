@@ -4,12 +4,12 @@ import Preloader from '../Preloader/Preloader';
 
 export default function SavedMoviesMovies({ isLoading }) {
   return (
-    <section className="movies">
+    <main className="movies">
     <SearchForm />
     {isLoading && (
       <Preloader />
     )}
     <MoviesCardList />
-    </section>
+    </main>
   )
 }

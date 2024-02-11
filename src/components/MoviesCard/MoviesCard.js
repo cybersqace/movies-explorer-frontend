@@ -9,88 +9,88 @@ export default function MoviesCard() {
     <li className='card'>
     <img src={cardPicture} alt="превью фильма" className='card__picture' />
     <div className='card__caption'>
-      <p className='card__title'>33 слова о дизайне</p>
+      <h2 className='card__title'>33 слова о дизайне</h2>
       {pathname === '/movies' ? (
-      <button type='button' className='card__button' /> 
+      <button type='button' className='card__button-save' /> 
       ) : ( 
-      <button type='button' className='card__button_remove' /> )}
+      <button type='button' className='card__button-remove' /> )}
     </div>
       <p className='card__subtitle'>1ч42м</p>
     </li>
     <li className='card'>
       <img src={cardPicture} alt="превью фильма" className='card__picture'></img>
       <div className='card__caption'>
-        <p className='card__title'>33 слова о дизайне</p>
+        <h2 className='card__title'>33 слова о дизайне</h2>
         {pathname === '/movies' ? (
-      <button type='button' className='card__button' /> 
+      <button type='button' className='card__button-save' /> 
       ) : ( 
-      <button type='button' className='card__button_remove' /> )}
+      <button type='button' className='card__button-remove' /> )}
       </div>
         <p className='card__subtitle'>1ч42м</p>
       </li>
       <li className='card'>
       <img src={cardPicture} alt="превью фильма" className='card__picture'></img>
       <div className='card__caption'>
-        <p className='card__title'>33 слова о дизайне</p>
+        <h2 className='card__title'>33 слова о дизайне</h2>
         {pathname === '/movies' ? (
-      <button type='button' className='card__button' /> 
+      <button type='button' className='card__button-save' /> 
       ) : ( 
-      <button type='button' className='card__button_remove' /> )}
+      <button type='button' className='card__button-remove' /> )}
       </div>
         <p className='card__subtitle'>1ч42м</p>
       </li>
       <li className='card'>
       <img src={cardPicture} alt="превью фильма" className='card__picture'></img>
       <div className='card__caption'>
-        <p className='card__title'>33 слова о дизайне</p>
+        <h2 className='card__title'>33 слова о дизайне</h2>
         {pathname === '/movies' ? (
-      <button type='button' className='card__button' /> 
+      <button type='button' className='card__button-save' /> 
       ) : ( 
-      <button type='button' className='card__button_remove' /> )}
+      <button type='button' className='card__button-remove' /> )}
       </div>
         <p className='card__subtitle'>1ч42м</p>
       </li>
       <li className='card'>
       <img src={cardPicture} alt="превью фильма" className='card__picture'></img>
       <div className='card__caption'>
-        <p className='card__title'>33 слова о дизайне</p>
+        <h2 className='card__title'>33 слова о дизайне</h2>
         {pathname === '/movies' ? (
-      <button type='button' className='card__button' /> 
+      <button type='button' className='card__button-save' /> 
       ) : ( 
-      <button type='button' className='card__button_remove' /> )}
+      <button type='button' className='card__button-remove' /> )}
       </div>
         <p className='card__subtitle'>1ч42м</p>
       </li>
       <li className='card'>
       <img src={cardPicture} alt="превью фильма" className='card__picture'></img>
       <div className='card__caption'>
-        <p className='card__title'>33 слова о дизайне</p>
+        <h2 className='card__title'>33 слова о дизайне</h2>
         {pathname === '/movies' ? (
-      <button type='button' className='card__button' /> 
+      <button type='button' className='card__button-save' /> 
       ) : ( 
-      <button type='button' className='card__button_remove' /> )}
+      <button type='button' className='card__button-remove' /> )}
       </div>
         <p className='card__subtitle'>1ч42м</p>
       </li>
       <li className='card'>
       <img src={cardPicture} alt="превью фильма" className='card__picture'></img>
       <div className='card__caption'>
-        <p className='card__title'>33 слова о дизайне</p>
+        <h2 className='card__title'>33 слова о дизайне</h2>
         {pathname === '/movies' ? (
-      <button type='button' className='card__button' /> 
+      <button type='button' className='card__button-save' /> 
       ) : ( 
-      <button type='button' className='card__button_remove' /> )}
+      <button type='button' className='card__button-remove' /> )}
       </div>
         <p className='card__subtitle'>1ч42м</p>
       </li>
       <li className='card'>
       <img src={cardPicture} alt="превью фильма" className='card__picture'></img>
       <div className='card__caption'>
-        <p className='card__title'>33 слова о дизайне</p>
+        <h2 className='card__title'>33 слова о дизайне</h2>
         {pathname === '/movies' ? (
-      <button type='button' className='card__button' /> 
+      <button type='button' className='card__button-save' /> 
       ) : ( 
-      <button type='button' className='card__button_remove' /> )}
+      <button type='button' className='card__button-remove' /> )}
       </div>
         <p className='card__subtitle'>1ч42м</p>
       </li>

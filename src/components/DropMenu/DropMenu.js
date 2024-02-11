@@ -1,11 +1,11 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 import './DropMenu.css';
 import accountlogo from '../../images/accountlogo.svg';
 
-export default function DropMenu ({ onClose }) {
+export default function DropMenu ({ onClose, loggedIn=true }) {
   return (
-    <div className='drop-menu'>
+    <div className={`drop-menu ${loggedIn ? 'drop-menu__visible' : ''}`}>
       <div className='drop-menu__background'>
         <div className='drop-menu__container'>
           <button type='button' className='drop-menu__close-button' onClick={() => onClose()} />

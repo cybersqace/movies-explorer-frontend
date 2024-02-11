@@ -1,4 +1,5 @@
 import './Profile.css'
+import { NavLink } from 'react-router-dom';
 
 export default function Profile() {
   return (
@@ -15,7 +16,7 @@ export default function Profile() {
           <input className='profile__input' type='email'/>
         </div>
         <button className='profile__edit-button'>Редактировать</button>
-        <button className='profile__signout-button'>Выйти из аккаунта</button>
+        <NavLink to="/"><button className='profile__signout-button'>Выйти из аккаунта</button></NavLink>
       </form>
     </div>
     </section>

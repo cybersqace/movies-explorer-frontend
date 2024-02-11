@@ -11,16 +11,12 @@
 
 @media screen and (max-width: 768px) {
   .header {
-    padding: 18px 30px;
+    padding: 15px 30px;
   }
 }
 
 @media screen and (max-width: 520px) {
   .header {
     padding: 18px 14px;
-  }
-
-  .header__logo {
-    align-self: center;
   }
 }
