@@ -1,0 +1,78 @@
+.cards {
+  padding: 70px 70px 80px;
+}
+
+.card-list {
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-rows: auto;
+  justify-items: center;
+  column-gap: 20px;
+  row-gap: 32px;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+.cards__button-block {
+  max-width: 320px;
+  margin: 80px auto 0;
+}
+
+.cards__button {
+  padding: 11px 60px 9px;
+  width: 320px;
+  height: 36px;
+  transition: opacity .3s ease;
+  border-radius: 6px;
+  background-color: rgb(244, 244, 244);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+.cards__button:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    padding: 70px 30px 80px;
+  }
+
+  .card-list {
+    column-gap: 30px;
+    row-gap: 36px;
+  }
+
+  .cards__button {
+    width: calc(240px + (320 - 240) * ((100vw - 320px) / (768 - 320)))
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .cards {
+    padding: 40px 10px 80px;
+  }
+
+  .card-list {
+    column-gap: 30px;
+    row-gap: 36px;
+  }
+
+  .card-list__button {
+    width: 240px;
+  }
+}
