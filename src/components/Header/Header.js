@@ -9,7 +9,7 @@ export default function Header({ loggedIn }) {
   const { pathname } = useLocation();
 
   return (
-    <header className={`header ${pathname !== '/' ? 'header__auth' : ''}`}>
+    <header className={`header ${pathname !== '/' ? 'header_auth' : ''}`}>
       <NavLink to='/'><img src={headerLogo} className="header__logo" alt="лого" /></NavLink>
       <Navigation loggedIn={loggedIn} />
     </header>

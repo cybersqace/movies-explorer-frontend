@@ -81,7 +81,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .drop-menu__visible {
+  .drop-menu_visible {
     display: block;
   }
 }

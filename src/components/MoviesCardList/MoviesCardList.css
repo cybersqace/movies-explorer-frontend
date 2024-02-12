@@ -48,6 +48,10 @@
     column-gap: 30px;
     row-gap: 36px;
   }
+
+  .cards__button {
+    width: calc(240px + (320 - 240) * ((100vw - 320px) / (768 - 320)))
+  }
 }
 
 @media screen and (max-width: 630px) {
