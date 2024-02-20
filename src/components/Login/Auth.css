@@ -75,6 +75,11 @@
   opacity: 0.8;
 }
 
+.auth__button-register:disabled {
+  background: gray;
+  opacity: 1;
+}
+
 .auth__button-login {
   margin-top: 221px;
   padding: 0;
@@ -93,6 +98,11 @@
 
 .auth__button-login:hover {
   opacity: 0.8;
+}
+
+.auth__button-login:disabled {
+  background: gray;
+  opacity: 1;
 }
 
 .auth__subtitle {

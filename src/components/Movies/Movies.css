@@ -1,3 +1,9 @@
 .movies {
   background-color: #FAFAFA;
 }
+
+.movies__error {
+  text-align: center;
+  color: red;
+  margin: 0;
+}
