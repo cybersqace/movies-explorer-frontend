@@ -30,12 +30,12 @@ export default function Profile({ onUpdateUser, onSignOut  }) {
         <h1 className='profile__title'>Привет, {currentUser.name}!</h1>
         <form className='profile__form form' onSubmit={handleSubmit}>
           <div className='profile__bar'>
-            <label className='profile__label'>Имя</label>
-            <input className='profile__input' type='text' required name='name' value={values.name || ''} onChange={handleChange}/>
+            <label className='profile__label' htmlFor='name'>Имя</label>
+            <input className='profile__input' type='text' required name='name' id='name' value={values.name || ''} onChange={handleChange}/>
           </div>
           <div className='profile__bar'>
-            <label className='profile__label'>Email</label>
-            <input className='profile__input' type='email' required name='email' value={values.email || ''} onChange={handleChange}/>
+            <label className='profile__label' htmlFor='email'>Email</label>
+            <input className='profile__input' type='email' required name='email' id='email' value={values.email || ''} onChange={handleChange}/>
           </div>
           <button className='profile__edit-button' disabled={isValueSameAsWas}>Редактировать</button>
           <NavLink to="/"><button className='profile__signout-button' onClick={() => onSignOut()}>Выйти из аккаунта</button></NavLink>

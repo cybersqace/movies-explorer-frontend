@@ -1,33 +1,97 @@
 import './MoviesCardList.css';
 import MoviesCard from '../MoviesCard/MoviesCard';
 import { useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import Preloader from "../Preloader/Preloader";
 
-export default function MoviesCardList({ movies, savedMoviesToggle, moviesSaved, moviesRemains, handleMore  }) {
-
+export default function MoviesCardList({  cards,savedMovies, isSavedFilms, isLoading, isReqError, isNotFound, handleLikeMovie, onDeleteMovie }) {
+  
+  const [shownMovies, setShownMovies] = useState(0);
   const { pathname } = useLocation();
 
+  function getSavedMovies(savedMovies, movie) {
+    return savedMovies.find((savedMovie) => savedMovie.movieId === movie.id);
+  };
+
+  function handlerResize() {
+    const display = window.innerWidth;
+    if (display > 1200) {
+      setShownMovies(12);
+    } else if (display > 900) {
+      setShownMovies(9);
+    } else if (display > 767) {
+      setShownMovies(8);
+    } else {
+      setShownMovies(5);
+    }
+  };
+
+  useEffect(() => {
+    handlerResize();
+  }, [])
+
+  function handleMore() {
+   const display = window.innerWidth;
+    if (display > 1200) {
+      setShownMovies(shownMovies + 4);
+    } else if (display > 900) {
+      setShownMovies(shownMovies + 3);
+    } else if (display > 768) {
+      setShownMovies(shownMovies + 2);
+    } else {
+      setShownMovies(shownMovies + 2);
+    }
+  }
+
   return (
-    <section className='cards'>
-      {movies.length > 0 ? (
-      <ul className='card-list'>
-      {movies.map((movie) => (
-         <MoviesCard   
-         key={movie.id || movie.movieId}
-         movie={movie}
-         savedMoviesToggle={savedMoviesToggle}
-         moviesSaved={moviesSaved}
-         />
-      ))}
-      </ul>
-         ) : (
-          <span className="cards__info">Ничего не найдено</span>
-        )}
-  
-      {moviesRemains.length > 0 && pathname !== '/saved-movies' && (
-      <div className='cards__button-block'>
-      <button className='cards__button' type='button' name='more' onClick={handleMore}>Ещё</button>
-      </div>
+    <section className="cards">
+      {isLoading && <Preloader />}
+      {isNotFound && !isLoading && (<span className="cards__info">Ничего не найдено</span>)}
+      {isReqError && !isLoading && (
+        <span className="cards__info">Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз</span>
+      )}
+      {!isLoading && !isReqError && !isNotFound && (
+        <>
+        {pathname === "/saved-movies" ? (
+          <>
+            <ul className="card-list">
+              {cards.map((movie) => (
+                <MoviesCard
+                  key={isSavedFilms ? movie._id : movie.id}
+                  cards={cards}
+                  movie={movie}
+                  liked={getSavedMovies(savedMovies, movie)}
+                  handleLikeMovie={handleLikeMovie}
+                  isSavedFilms={isSavedFilms}
+                  savedMovies={savedMovies}
+                  onDeleteMovie={onDeleteMovie}
+                />
+                ))}
+            </ul>
+          </>
+          ) : (
+          <>
+            <ul className="card-list">
+              {cards.slice(0, shownMovies).map((movie) => (
+                <MoviesCard
+                  key={isSavedFilms ? movie._id : movie.id}
+                  cards={cards}
+                  movie={movie}
+                  liked={getSavedMovies(savedMovies, movie)}
+                  handleLikeMovie={handleLikeMovie}
+                  isSavedFilms={isSavedFilms}
+                  savedMovies={savedMovies}
+                  onDeleteMovie={onDeleteMovie}
+                  />
+              ))}
+            </ul>
+            <div className="cards__button-block">
+              {cards.length > shownMovies ? (<button className="cards__button" onClick={handleMore}>Ещё</button>) : ('')}
+            </div>
+          </>
+            )}
+        </>
       )}
     </section>
-  );
-};
+  )
+}

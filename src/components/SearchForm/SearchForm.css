@@ -112,6 +112,13 @@
   border-bottom: 1px solid #E8E8E8;
 }
 
+.search-form__error {
+  text-align: center;
+  color: red;
+  margin: 0;
+  padding-top: 5vw;
+}
+
 @media screen and (max-width: 768px) {
   .search-form {
     padding: 80px 30px 11px;
@@ -178,6 +185,11 @@
   .search-form__input {
     width: 60%;
     padding: 0;
+    font-size: 14px;
+  }
+
+  .search-form__error {
+    padding-top: 2vh;
     font-size: 14px;
   }
 }
