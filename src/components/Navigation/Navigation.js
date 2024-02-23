@@ -4,7 +4,7 @@ import './Navigation.css';
 import accountlogo from '../../images/accountlogo.svg';
 import DropMenu from '../DropMenu/DropMenu';
 
-function Navigation ({ loggedIn=true }) {
+function Navigation ({ loggedIn }) {
   const { pathname } = useLocation();
   const [isDropMenuOpen, setIsDropMenuOpen] = useState(false);
 
@@ -31,7 +31,7 @@ function Navigation ({ loggedIn=true }) {
         <NavLink to='/signin'><button className='menu__link menu__link_signin' type='button'>Войти</button></NavLink>
       </div>
        )}
-      {!isDropMenuOpen && loggedIn ? (<button className='menu__button-open' type='button' onClick={toggleDropMenu} />) : <DropMenu onClose={toggleDropMenu} />}
+      {!isDropMenuOpen && loggedIn ? (<button className='menu__button-open' type='button' onClick={toggleDropMenu} />) : <DropMenu loggedIn={loggedIn} onClose={toggleDropMenu} />}
     </nav>
   )
 }
